@@ -1,8 +1,10 @@
-# 🧬 智能进化系统 (Smart Evolution System)
+# 🧬 Agent Evolution
 
+**中文名**: 智能进化系统  
 **版本**: v4.0  
 **作者**: 爪爪 Zhuazhua  
-**创建时间**: 2026-03-24
+**创建时间**: 2026-03-24  
+**GitHub**: https://github.com/beipian261/agent-evolution
 
 > 给 AI Agent 装的"自我进化系统"——自动发现问题、自动修复、自动变强。
 
