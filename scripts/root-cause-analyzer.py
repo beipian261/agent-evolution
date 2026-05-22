@@ -143,10 +143,10 @@ def analyze_root_cause(learning):
     
     # 从内容中提取预防措施
     preventive_patterns = [
-        r"预防 [：:]\s*(.+)",
-        r"避免 [：:]\s*(.+)",
+        r"预防[：:]\s*(.+)",
+        r"避免[：:]\s*(.+)",
         r"下次\s*(.+)",
-        r"建议 [：:]\s*(.+)",
+        r"建议[：:]\s*(.+)",
     ]
     
     for pattern in preventive_patterns:

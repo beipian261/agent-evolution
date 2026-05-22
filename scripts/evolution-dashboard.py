@@ -5,7 +5,7 @@
 """
 
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 WORKSPACE = Path("/root/.openclaw/workspace")
@@ -203,8 +203,6 @@ def generate_dashboard():
 
 
 if __name__ == "__main__":
-    from datetime import timedelta
-    
     dashboard = generate_dashboard()
     
     # 保存 Dashboard

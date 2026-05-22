@@ -189,9 +189,74 @@ Gene 是可复用的解决方案模板。目前有 21 个 Gene，分 8 类：
 
 ---
 
+## 🔄 CI/CD 自动化
+
+本项目使用 GitHub Actions 实现持续集成和持续部署。
+
+### 工作流程
+
+#### CI (持续集成)
+- **触发条件**: Push 到 `main`/`develop` 分支，或创建 PR
+- **检查项**:
+  - Python 版本兼容性测试 (3.7 - 3.11)
+  - 代码质量检查 (flake8, pylint)
+  - 单元测试与覆盖率报告
+  - 可选依赖验证 (chromadb, prophet)
+  - 代码格式检查 (Black, isort)
+
+#### CD (持续部署)
+- **触发条件**: Push 到 `main` 分支，或创建 tag
+- **检查项**:
+  - 完整测试套件
+  - 软件包构建
+  - GitHub Release 自动发布
+
+### 本地运行 CI 检查
+
+```bash
+# 安装开发依赖
+pip install -r requirements.txt
+
+# 运行测试
+pytest scripts/ -v --cov=scripts
+
+# 代码质量检查
+flake8 scripts/
+pylint scripts/
+
+# 代码格式化
+black scripts/
+isort scripts/
+```
+
+### 查看 GitHub Actions
+
+访问仓库的 **Actions** 标签页查看构建状态。
+
+---
+
 ## 🤝 贡献
 
 欢迎提 Issue 和 PR！
+
+### 开发环境设置
+
+```bash
+# 克隆仓库
+git clone https://github.com/beipian261/agent-evolution.git
+cd agent-evolution
+
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# 或 venv\Scripts\activate  # Windows
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 安装可选依赖（完整功能）
+pip install chromadb prophet pandas
+```
 
 ### 可以贡献的方向
 
