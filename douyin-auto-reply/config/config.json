@@ -1,0 +1,33 @@
+{
+  "app_name": "抖音AI自动回复助手",
+  "version": "1.0.0",
+  "simulator": {
+    "name": "MuMu模拟器",
+    "window_title": "MuMuPlayer",
+    "emulator_path": "",
+    "device_id": ""
+  },
+  "monitor": {
+    "check_interval": 5,
+    "enable_private_message": true,
+    "enable_comment": true
+  },
+  "reply": {
+    "mode": "ai",
+    "min_delay": 3,
+    "max_delay": 12,
+    "ai_provider": "openai",
+    "ai_api_key": "",
+    "ai_model": "gpt-3.5-turbo",
+    "ai_temperature": 0.7,
+    "ai_personality": "友好、亲切、自然，像真人一样回复"
+  },
+  "safety": {
+    "enable_sensitive_word_filter": true,
+    "enable_random_delay": true
+  },
+  "database": {
+    "history_path": "data/history.db",
+    "keywords_path": "data/keywords.json"
+  }
+}
