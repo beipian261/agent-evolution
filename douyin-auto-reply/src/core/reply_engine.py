@@ -56,7 +56,7 @@ class ReplyEngine:
 
         if not api_key:
             logger.warning("未设置AI API密钥")
-            return None
+            return self._generic_ai_reply(message, api_key, "")
 
         personality = self.config.get('reply.ai_personality', '友好、亲切、自然')
         model = self.config.get('reply.ai_model', 'gpt-3.5-turbo')
